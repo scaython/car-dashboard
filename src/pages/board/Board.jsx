@@ -1,21 +1,43 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import "./Board.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTaxi } from '@fortawesome/free-solid-svg-icons';
 import { faFlagCheckered, faLockOpen, faLock } from '@fortawesome/free-solid-svg-icons';
+import { motion } from "framer-motion"
+
 function Board() {
 
   const [autoPilotOn, setAutoPilotOn] = useState(false);
   const [sportOn,setSportOn] = useState(false);
   const [lock,setLock] = useState(false);
- 
+  const [speed, setSpeed] = useState(0);
+
+  let bootup = new Audio("../../../public/sounds/bootup.mp3")
+  let lockSound = new Audio("../../../public/sounds/lock.mp3")
+  
+  let notification = new Audio("../../../public/sounds/notification.mp3")
+
+
+
+  const handleLock = ()=>{
+    setLock(!lock)
+    lockSound.play()
+  }
+  const handlePilot = () =>{
+    setAutoPilotOn(!autoPilotOn)
+    if(autoPilotOn== false){
+      bootup.play()
+    }
+   
+    
+  }
   return (
     <div className='board-container'>
       
       
       <div className='speed-group'>
         <div className="speed">
-          0
+          {speed}
         </div>
         <div className="kmh">
           KMH
@@ -61,22 +83,36 @@ function Board() {
 
 
       <div className="button-group">
-        <button className='btn-auto'>
-          <span>
-            <FontAwesomeIcon icon={faTaxi} style={{ color: "#fad900", background: "none", marginLeft: "40px" }} />
+        <button className='btn-auto' onClick={handlePilot}>
+          {autoPilotOn? (
+             <span>
+             <FontAwesomeIcon icon={faTaxi} style={{ color: "#fad900", background: "none", marginLeft: "40px" }} />
+           </span>
+          ):(
+            <span>
+            <FontAwesomeIcon icon={faTaxi} style={{ color: "", background: "none", marginLeft: "40px" }} />
+            </span>
+          )}
+          <span className='text'>
+             Autopilot
+
           </span>
-          Autopilot
         </button>
         <button className='btn-sport'>
           <span>
           <FontAwesomeIcon icon={faFlagCheckered}  style={{ color: "", background: "none", marginLeft: "40px" }} />
           </span>
           Sport</button>
-        <button className='btn-lock'>
-          <span>
-          <FontAwesomeIcon icon={faLockOpen}  style={{ color: "", background: "none", marginLeft: "40px" }} />
-          </span>
-          Lock</button>
+        <button className='btn-lock' onClick={handleLock}>
+          {lock || autoPilotOn? (
+              <span>
+              <FontAwesomeIcon icon={faLock}  style={{ color: "#2796E5", background: "none", marginLeft: "40px", transition:"1s" }} />
+              </span>
+          ):( <span>
+            <FontAwesomeIcon icon={faLockOpen}  style={{ color: "", background: "none", marginLeft: "40px" }} />
+            </span>)}
+         
+          <span className= {lock? "text locked" : "text"}>Lock</span></button>
       </div>
     </div>
   )

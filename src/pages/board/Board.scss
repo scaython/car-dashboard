@@ -90,6 +90,13 @@
             background-color: rgba(255, 255, 255, 1);
 
             color: #959595;
+            .text{
+                position: sticky;
+                
+            }
+            .text.locked{
+                transform: translateY(10deg);
+            }
         }
     }
     
