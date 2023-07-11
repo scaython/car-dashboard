@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@400;500&display=swap');
+
+.nav {
+    margin: 1rem auto;
+    background-color: rgba(0, 0, 0, 0.053);
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.067);
+    width: 100%;
+    max-width: 1005px;
+    height: 70px;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 32px;
+  
+  .btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 251px;
+    height: 60px;
+    border-radius: 16px;
+    text-decoration: none;
+    border-width: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #959595;
+  }
+  
+  .btn.active {
+    color: #2796E5;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    
+    .btn {
+      margin-top: 1rem;
+      max-width: 100%;
+    }
+  }
+}
