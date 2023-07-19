@@ -24,26 +24,7 @@ function App() {
     }
 
   }
-  useEffect(() => {
-    const successCallback = (position) => {
-      const currentSpeed = position.coords.speed;
-      const speedInKmh = (currentSpeed * 3.6);
-      setSpeed(speedInKmh);
-    };
-  
-    const errorCallback = (error) => {
-      console.error('Error getting location:', error);
-    };
-  
-    const options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0,
-    };
-  
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
-  }, []);
-  
+
  
   const handleSport = () =>{
     setSportMode((sportMode)=>!sportMode)
