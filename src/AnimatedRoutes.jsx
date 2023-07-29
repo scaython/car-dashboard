@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './components/navbar/Navbar'
 import Board from "./pages/board/Board"
-import Music from "./pages/music/Music"
+import Music from "./pages/music/Applications"
 import Nav from "./pages/nav/Nav"
 import { Route,Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from "framer-motion"

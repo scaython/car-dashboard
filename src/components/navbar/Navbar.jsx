@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 
-const Navbar = () => {
+const Navbar = ({theme}) => {
 
     const [active,setActive] = useState("board");
     let navbarClick = new Audio("../../../public/sounds/navbar-click.mp3")
@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         
         <>
-            <motion.div className='nav'   >
+            <motion.div className={`nav ${theme}`}   >
             
  
 

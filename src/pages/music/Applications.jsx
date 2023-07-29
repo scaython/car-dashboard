@@ -1,6 +1,6 @@
 import React from 'react'
-import "./Music.scss"
-const Music = () => {
+import "./Applications.scss"
+const Applications = () => {
   return (
     <div>Music</div>
   )

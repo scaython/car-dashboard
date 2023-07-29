@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Board from "./pages/board/Board"
-import Music from "./pages/music/Music"
+import Applications from "./pages/music/Applications"
 import Nav from "./pages/nav/Nav"
 import { Route,Routes } from 'react-router-dom'
 import AnimatedRoutes from './AnimatedRoutes'
@@ -39,13 +39,13 @@ function App() {
   return (
     <>
       <div className={`app ${theme}`} >
-       <Navbar/>
+       <Navbar theme={theme}/>
        <div className="page-container">
           <Routes>
                 <Route path='/' element={<Board  handleSport={handleSport} sportMode={sportMode} speed={speed} />} />
                 <Route path='/board' element={<Board   handleSport={handleSport} sportMode={sportMode} speed={speed}/>} />
-                <Route path='/music' element={<Music />} />
-                <Route path='/nav' element={<Nav />} />
+                <Route path='/music' element={<Applications />} />
+                <Route path='/nav' element={<Nav/>} />
             </Routes>
        </div>
       </div>

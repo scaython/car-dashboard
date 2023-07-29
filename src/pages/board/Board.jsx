@@ -88,16 +88,30 @@ function Board({handleSport, sportMode, speed}) {
           <motion.span    animate={sportMode?{
               rotate:[0,-20,-20],
               y:[0,-3,5],
+              scale:1.1,
               
-              textShadow: "0 0 50px #0072ff",
+              textShadow: "0 5px 50px #0072ff, 0 0 20px red",
               transition:{
-               duration:0.7
+               duration:0.7,
+               
               }
             }:{}}>
             <FontAwesomeIcon icon={faFlagCheckered}  style={{ color: sportMode? sportStyle.on_color:sportStyle.off_color , background: "none", marginLeft: "40px" }}
             />
           </motion.span>
-            Sport
+            <motion.span 
+            initial={{
+              x:10,
+              opacity:1
+            }}
+            animate={sportMode?{
+                x:[-500,10],
+                opacity:[0,0.5,1],
+                color:"#30475E"
+            }:{}}>
+
+               Sport
+            </motion.span>
         </button>
 
         <button className='btn-lock' onClick={handleLock}>
