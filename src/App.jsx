@@ -44,10 +44,11 @@ function App() {
           <Routes>
                 <Route path='/' element={<Board  handleSport={handleSport} sportMode={sportMode} speed={speed} />} />
                 <Route path='/board' element={<Board   handleSport={handleSport} sportMode={sportMode} speed={speed}/>} />
-                <Route path='/music' element={<Applications />} />
+                <Route path='/apps' element={<Applications />} />
                 <Route path='/nav' element={<Nav/>} />
-            </Routes>
+          </Routes>
        </div>
+       
       </div>
      
     </>

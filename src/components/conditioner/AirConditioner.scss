@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@400;500&display=swap');
+
+
+.wrapper{
+
+    width: 329px;
+    height: 215px;
+    border-radius: 21.67px;
+    background-color: #EEFBFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    overflow: hidden;
+  
+    .group{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        .button{
+            font-weight: bold;
+            font-size: 64px;
+            color: #DB4B3D;
+            padding: 15px 15px;
+            border-radius: 50%;
+         }
+         .decrease{
+             color: #3573E7;
+         }
+         .degree{
+             font-weight: bold;
+             font-size: 86px;
+         }
+    }
+  
+    
+}

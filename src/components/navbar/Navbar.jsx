@@ -25,8 +25,8 @@ const Navbar = ({theme}) => {
                 <Link to="/nav"   className={active === 'nav' ? 'btn active' : 'btn'} onClick={()=>handleClick('nav')}>
                     Nav
                 </Link>
-                <Link to="/music"   className={active === 'music' ? 'btn active' : 'btn'} onClick={()=>handleClick('music')}>
-                    Music
+                <Link to="/apps"   className={active === 'music' ? 'btn active' : 'btn'} onClick={()=>handleClick('music')}>
+                    Apps
                 </Link>
             </motion.div>
 
