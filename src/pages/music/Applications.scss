@@ -1,6 +1,18 @@
-.apps-wrapper{
+.apps-wrapper {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
     margin-top: 50px;
-}
+  
+    .upper-row {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+    }
+  
+    .second-row {
+      display: flex;
+      justify-content: center;
+    }
+  }
