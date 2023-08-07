@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 const MusicPlayer = () => {
 
     
-    const [trackIndex, setTrackIndex] = useState(0);
+    const [trackIndex, setTrackIndex] = useState(3);
     const [currTrack, setCurrentTrack] = useState(tracks[trackIndex]);
 
   const audioRef = useRef();
