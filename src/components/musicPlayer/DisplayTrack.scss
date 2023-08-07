@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@400;500&display=swap');
+
+
+.audio-info{
+    font-family: 'Roboto';
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+   
+    .audio-image img{
+        object-fit: cover;
+        width: 126px;
+        margin-left: 20px;
+        height: 126px;
+        border-radius: 8px;
+    }
+    .audio-icon {
+        font-size: 40px;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background: #989898;
+      }
+    
+      .text{
+
+        .title{
+            font-size: 46px;
+            color: #ffff;
+        }
+        .author{
+            font-size: 26px;
+            color: #ffff;
+        }
+      }
+}

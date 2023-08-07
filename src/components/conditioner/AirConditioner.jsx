@@ -1,13 +1,15 @@
 import React,{useState} from 'react'
 import './AirConditioner.scss'
+import { motion } from 'framer-motion'
 
 const AirConditioner = () => {
 
   const [degree,setDegree] = useState(24)
+ 
 
   const handleIncrement = () =>{
     if(degree !== 29){
-        setDegree(degree => degree +1)
+        setDegree(degree => degree + 1)
     }
     
   }
@@ -20,7 +22,11 @@ const AirConditioner = () => {
    
   }
   return (
-    <div className='wrapper'>
+    <motion.div 
+
+       className='wrapper'
+      
+    >
         <div className="group">
         <div className="button decrease" onClick={handleDecrease}>
             -
@@ -34,7 +40,7 @@ const AirConditioner = () => {
         </div>
         <hr />
       
-    </div>
+    </motion.div>
   )
 }
 

@@ -13,6 +13,11 @@
     align-items: center;
     font-family: 'Roboto';
     overflow: hidden;
+
+    &[data-expanded='true'] {
+        width: 760px;
+        height: 540px;
+      }
   
     .group{
         
