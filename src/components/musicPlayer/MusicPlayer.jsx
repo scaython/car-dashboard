@@ -19,7 +19,8 @@ const MusicPlayer = () => {
         <motion.div className='player-widget-wrapper'>
             <div className="left">
                 <DisplayTrack currTrack={currTrack} audioRef={audioRef} />
-                <Controls audioRef={audioRef}   {...{
+                <Controls audioRef={audioRef}   
+                {...{
                     tracks,
                     trackIndex,
                     setTrackIndex,
