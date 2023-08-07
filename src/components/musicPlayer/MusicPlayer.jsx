@@ -20,7 +20,6 @@ const MusicPlayer = () => {
             <div className="left">
                 <DisplayTrack currTrack={currTrack} audioRef={audioRef} />
                 <Controls audioRef={audioRef}   {...{
-
                     tracks,
                     trackIndex,
                     setTrackIndex,
