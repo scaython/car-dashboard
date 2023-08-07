@@ -4,6 +4,8 @@ import Weather from '../../components/weather/Weather'
 import ConsumptionWidget from '../../components/consumption/ConsumptionWidget'
 import AirConditioner from '../../components/conditioner/AirConditioner'
 import MusicPlayer from '../../components/musicPlayer/MusicPlayer'
+import { motion } from 'framer-motion'
+
 const Applications = () => {
   return (
     <>
