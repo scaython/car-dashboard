@@ -16,8 +16,7 @@ const MusicPlayer = () => {
   const audioRef = useRef();
     
     return (
-        <motion.div className='player-widget-wrapper'
-        >
+        <motion.div className='player-widget-wrapper'>
             <div className="left">
                 <DisplayTrack currTrack={currTrack} audioRef={audioRef} />
                 <Controls audioRef={audioRef}   {...{
