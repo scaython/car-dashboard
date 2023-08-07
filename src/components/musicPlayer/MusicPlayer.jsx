@@ -26,13 +26,13 @@ const MusicPlayer = () => {
                     setTrackIndex,
                     setCurrentTrack,
                 }} />
-                
+
             </div>
             <div className="right">
 
             </div>
         </motion.div>
-  )
+    )
 }
 
 export default MusicPlayer
